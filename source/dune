@@ -1,0 +1,16 @@
+(
+ library
+  (name Source)
+  (public_name dune-fmt)
+  (libraries sexplib)
+  (flags
+   (
+    :standard
+    -w
+    +A-4-9-44-48-40-42
+    -warn-error
+    -3-4-9-44-48
+    -safe-string
+   )
+  )
+)

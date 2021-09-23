@@ -1,0 +1,36 @@
+{
+  "name": "dune-fmt",
+  "version": "0.1.0",
+  "description": "",
+  "author": "davesnx <dsnxmoreno@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/davesnx/dune-fmt",
+  "keywords": [ "reason", "ocaml", "dune", "formatter" ],
+  "bugs": { "url": "https://github.com/davesnx/dune-fmt/issues" },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davesnx/dune-fmt.git"
+  },
+  "scripts": {
+    "bin": "esy x dune-fmt",
+    "start": "esy b dune build --watch",
+    "test": "esy b dune runtest --force",
+    "format": "esy b dune build @fmt --auto-promote --root ."
+  },
+  "esy": {
+    "build": "dune build -p dune-fmt",
+    "buildsInSource": "_build",
+    "buildEnv": { "ODOC_SYNTAX": "re" },
+    "release": { "bin": "dune-fmt" }
+  },
+  "dependencies": {
+    "@opam/cmdliner": "1.0.4",
+    "@opam/core": "v0.14.1",
+    "@opam/dune": "2.8.5",
+    "@opam/ocaml-lsp-server": "1.6.1",
+    "@opam/reason": "3.7.0",
+    "@opam/sexplib": "v0.14.0",
+    "@opam/yojson": "1.7.0",
+    "ocaml": "^4.12.0"
+  }
+}

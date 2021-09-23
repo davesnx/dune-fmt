@@ -1,0 +1,6 @@
+(executable
+ (name Bin)
+ (modes native)
+ (public_name dune-fmt)
+ (libraries Source cmdliner unix core)
+)
